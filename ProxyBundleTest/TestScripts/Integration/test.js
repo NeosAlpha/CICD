@@ -33,7 +33,7 @@ var input = {
 describe('Test Suite', function() {
    it('Get access token', function(done) {
 
-       supertest.agent("https://earthport-test-ci.apigee.net/oauth/")
+       supertest.agent("https://arthport-test-ci.apigee.net/oauth/")
        .post('/token?grant_type=client_credentials')
        .set('Accept', 'application/json')
       // .set('grant_type', 'client_credentials')
