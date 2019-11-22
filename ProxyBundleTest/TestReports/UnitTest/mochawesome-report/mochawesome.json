@@ -8,6 +8,9 @@
     "start": "2019-11-22T09:21:29.760Z",
     "end": "2019-11-22T09:21:29.801Z",
     "duration": 41,
+    "start": "2019-11-22T09:13:06.281Z",
+    "end": "2019-11-22T09:13:06.307Z",
+    "duration": 26,
     "testsRegistered": 12,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -19,6 +22,7 @@
   "results": [
     {
       "uuid": "4e453870-e629-42af-a483-439d051376c1",
+      "uuid": "5e828075-6e0d-44e3-a668-6f76e3f512c1",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -28,6 +32,7 @@
       "suites": [
         {
           "uuid": "fc6ea532-18bf-4294-9712-2066586c964e",
+          "uuid": "d2b4190b-97d0-48b9-8f7c-f632ac95a63b",
           "title": "Mapping Test",
           "fullFile": "D:\\v1\\TeamCity\\buildAgent\\work\\423b534a26db89a4\\ProxyBundleTest\\TestScripts\\Unit\\test\\test.js",
           "file": "D:\\v1\\TeamCity\\buildAgent\\work\\423b534a26db89a4\\ProxyBundleTest\\TestScripts\\Unit\\test\\test.js",
@@ -38,7 +43,9 @@
               "title": "Checking userID.merchantUserID",
               "fullTitle": "Mapping Test Checking userID.merchantUserID",
               "timedOut": false,
+ 
               "duration": 5,
+              "duration": 3,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -49,6 +56,9 @@
               "err": {},
               "uuid": "af2090e6-1a3c-48f7-bef4-19a0b9a69b3a",
               "parentUUID": "fc6ea532-18bf-4294-9712-2066586c964e",
+
+              "uuid": "86ddd5b4-9d10-431d-8f5b-64158cd37988",
+              "parentUUID": "d2b4190b-97d0-48b9-8f7c-f632ac95a63b",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +66,7 @@
               "title": "Checking accountCurrency",
               "fullTitle": "Mapping Test Checking accountCurrency",
               "timedOut": false,
-              "duration": 1,
+              "duration": 0,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -67,6 +77,9 @@
               "err": {},
               "uuid": "f7473888-a02f-4eba-b1ed-5fa8aaf2a218",
               "parentUUID": "fc6ea532-18bf-4294-9712-2066586c964e",
+
+              "uuid": "3faeb6ea-b00a-4190-9c47-5065435abf2c",
+              "parentUUID": "d2b4190b-97d0-48b9-8f7c-f632ac95a63b",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +87,7 @@
               "title": "Checking payerIdentity.individualIdentity.name.familyName",
               "fullTitle": "Mapping Test Checking payerIdentity.individualIdentity.name.familyName",
               "timedOut": false,
-              "duration": 1,
+              "duration": 0,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -85,6 +98,9 @@
               "err": {},
               "uuid": "9595a8b7-e5a2-49e8-988c-e86b4615385a",
               "parentUUID": "fc6ea532-18bf-4294-9712-2066586c964e",
+
+              "uuid": "60d37739-3f00-4e52-ab34-fc2331e51f8b",
+              "parentUUID": "d2b4190b-97d0-48b9-8f7c-f632ac95a63b",
               "isHook": false,
               "skipped": false
             },
@@ -103,6 +119,8 @@
               "err": {},
               "uuid": "9faa826f-0746-4db2-8daa-ac37182c8cbd",
               "parentUUID": "fc6ea532-18bf-4294-9712-2066586c964e",
+              "uuid": "ed79890c-59d7-42c8-b4cc-f8d6fd78ebf8",
+              "parentUUID": "d2b4190b-97d0-48b9-8f7c-f632ac95a63b",
               "isHook": false,
               "skipped": false
             },
@@ -121,6 +139,9 @@
               "err": {},
               "uuid": "5ce1a657-5024-419b-b901-4759f937f27d",
               "parentUUID": "fc6ea532-18bf-4294-9712-2066586c964e",
+
+              "uuid": "1cee9aa2-86f0-438b-b514-1d52ea6bb3af",
+              "parentUUID": "d2b4190b-97d0-48b9-8f7c-f632ac95a63b",
               "isHook": false,
               "skipped": false
             },
@@ -128,7 +149,7 @@
               "title": "Checking payerIdentity.individualIdentity.address.city",
               "fullTitle": "Mapping Test Checking payerIdentity.individualIdentity.address.city",
               "timedOut": false,
-              "duration": 0,
+              "duration": 1,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -139,6 +160,9 @@
               "err": {},
               "uuid": "bafe89e2-f5da-4539-a17e-0357b34f2d79",
               "parentUUID": "fc6ea532-18bf-4294-9712-2066586c964e",
+
+              "uuid": "89cb92f9-8b81-4328-91aa-5bcb580adc65",
+              "parentUUID": "d2b4190b-97d0-48b9-8f7c-f632ac95a63b",
               "isHook": false,
               "skipped": false
             },
@@ -157,6 +181,9 @@
               "err": {},
               "uuid": "99fe08ae-e677-4008-a94a-6331dc297a9d",
               "parentUUID": "fc6ea532-18bf-4294-9712-2066586c964e",
+
+              "uuid": "9b89f554-b448-457f-85e2-58b360847256",
+              "parentUUID": "d2b4190b-97d0-48b9-8f7c-f632ac95a63b",
               "isHook": false,
               "skipped": false
             },
@@ -175,6 +202,9 @@
               "err": {},
               "uuid": "e6c90766-38fb-460a-8924-461ab3a4962c",
               "parentUUID": "fc6ea532-18bf-4294-9712-2066586c964e",
+
+              "uuid": "f172b026-84c3-4181-b5d8-386d2dbc94e1",
+              "parentUUID": "d2b4190b-97d0-48b9-8f7c-f632ac95a63b",
               "isHook": false,
               "skipped": false
             },
@@ -193,6 +223,9 @@
               "err": {},
               "uuid": "be221ed2-f1cb-42ab-b986-8acd092b036d",
               "parentUUID": "fc6ea532-18bf-4294-9712-2066586c964e",
+
+              "uuid": "fe882144-0f8a-4bb6-b525-81bdc29f705f",
+              "parentUUID": "d2b4190b-97d0-48b9-8f7c-f632ac95a63b",
               "isHook": false,
               "skipped": false
             },
@@ -211,6 +244,8 @@
               "err": {},
               "uuid": "808d69a9-e0fa-4a2f-8e33-2159277c4fa7",
               "parentUUID": "fc6ea532-18bf-4294-9712-2066586c964e",
+              "uuid": "88dc9e05-3546-4273-bbef-435639d522fa",
+              "parentUUID": "d2b4190b-97d0-48b9-8f7c-f632ac95a63b",
               "isHook": false,
               "skipped": false
             },
@@ -229,6 +264,8 @@
               "err": {},
               "uuid": "b0a9307b-6458-4849-9035-92dd8368b03a",
               "parentUUID": "fc6ea532-18bf-4294-9712-2066586c964e",
+              "uuid": "55e422d0-a647-4cb6-b347-6a91b7e1ee8c",
+              "parentUUID": "d2b4190b-97d0-48b9-8f7c-f632ac95a63b",
               "isHook": false,
               "skipped": false
             },
@@ -247,6 +284,9 @@
               "err": {},
               "uuid": "86702550-6c59-437d-b17b-083da18d295a",
               "parentUUID": "fc6ea532-18bf-4294-9712-2066586c964e",
+
+              "uuid": "c03833a6-5899-4872-88f9-3099c4dd088b",
+              "parentUUID": "d2b4190b-97d0-48b9-8f7c-f632ac95a63b",
               "isHook": false,
               "skipped": false
             }
@@ -265,11 +305,24 @@
             "808d69a9-e0fa-4a2f-8e33-2159277c4fa7",
             "b0a9307b-6458-4849-9035-92dd8368b03a",
             "86702550-6c59-437d-b17b-083da18d295a"
+            "86ddd5b4-9d10-431d-8f5b-64158cd37988",
+            "3faeb6ea-b00a-4190-9c47-5065435abf2c",
+            "60d37739-3f00-4e52-ab34-fc2331e51f8b",
+            "ed79890c-59d7-42c8-b4cc-f8d6fd78ebf8",
+            "1cee9aa2-86f0-438b-b514-1d52ea6bb3af",
+            "89cb92f9-8b81-4328-91aa-5bcb580adc65",
+            "9b89f554-b448-457f-85e2-58b360847256",
+            "f172b026-84c3-4181-b5d8-386d2dbc94e1",
+            "fe882144-0f8a-4bb6-b525-81bdc29f705f",
+            "88dc9e05-3546-4273-bbef-435639d522fa",
+            "55e422d0-a647-4cb6-b347-6a91b7e1ee8c",
+            "c03833a6-5899-4872-88f9-3099c4dd088b"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
           "duration": 8,
+          "duration": 4,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
