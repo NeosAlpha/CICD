@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="Extract-Query-Params-Get-Balance">
+    <DisplayName>Extract Query Params Get Balance</DisplayName>
+    <Source>request</Source>
+    <QueryParam name="managedMerchantName">
+        <Pattern ignoreCase="true">{managedMerchantName}</Pattern>
+    </QueryParam>
+    <QueryParam name="currency">
+        <Pattern ignoreCase="true">{currency}</Pattern>
+    </QueryParam>
+    <VariablePrefix>urirequest</VariablePrefix>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</ExtractVariables>

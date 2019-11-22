@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="Extract-Query-Params-Settlement-Calander">
+    <DisplayName>Extract Query Params Settlement Calander</DisplayName>
+    <Source>request</Source>
+    <QueryParam name="serviceLevel">
+        <Pattern ignoreCase="true">{serviceLevel}</Pattern>
+    </QueryParam>
+    <QueryParam name="beneficiaryCountry">
+        <Pattern ignoreCase="true">{beneficiaryCountry}</Pattern>
+    </QueryParam>
+    <QueryParam name="beneficiaryCurrency">
+        <Pattern ignoreCase="true">{beneficiaryCurrency}</Pattern>
+    </QueryParam>
+    <QueryParam name="payoutRequestCurrency">
+        <Pattern ignoreCase="true">{payoutRequestCurrency}</Pattern>
+    </QueryParam>
+    <QueryParam name="numberOfCalendarDays">
+        <Pattern ignoreCase="true">{numberOfCalendarDays}</Pattern>
+    </QueryParam>
+    <VariablePrefix>urirequest</VariablePrefix>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</ExtractVariables>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TargetEndpoint name="default">
+    <Description/>
+    <FaultRules>
+        <FaultRule name="server-error">
+            <Condition>(error.state = "TARGET_RESP_FLOW")</Condition>
+            <Step>
+                <Name>FC-CORS-Postflow</Name>
+            </Step>
+            <Step>
+                <Name>Server-Error-Handling</Name>
+            </Step>
+        </FaultRule>
+    </FaultRules>
+    <PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <Name>Modify-Request-Verb</Name>
+            </Step>
+            <Step>
+                <Name>Set-Target-URL</Name>
+            </Step>
+        </Request>
+        <Response>
+            <Step>
+                <Name>Modify-Response-Verb</Name>
+            </Step>
+        </Response>
+    </PreFlow>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response>
+            <!--<Step>-->
+            <!--    <Name>RC-get-balance</Name>-->
+            <!--    <Condition>(proxy.pathsuffix MatchesPath "/balances") and (request.verb = "GET")</Condition>-->
+            <!--</Step>-->
+            <!--<Step>-->
+            <!--    <Name>RC-OneHour</Name>-->
+            <!--    <Condition>((proxy.pathsuffix MatchesPath "/users/*/bank-accounts") or (proxy.pathsuffix MatchesPath "/settlement-calendars") or (proxy.pathsuffix MatchesPath "/payments/meta") or (proxy.pathsuffix MatchesPath "/users/*/bank-accounts/*")or (proxy.pathsuffix MatchesPath "/users/*")or (proxy.pathsuffix MatchesPath "/transactions/*"))and (request.verb = "GET")</Condition>-->
+            <!--</Step>-->
+            <!--<Step>-->
+            <!--    <Name>RC-get-statements</Name>-->
+            <!--    <Condition>(proxy.pathsuffix MatchesPath "/statements") and (request.verb = "GET")</Condition>-->
+            <!--</Step>-->
+            <!--<Step>-->
+            <!--    <Name>RC-get-transactions</Name>-->
+            <!--    <Condition>(proxy.pathsuffix MatchesPath "/transactions") and (request.verb = "GET")</Condition>-->
+            <!--</Step>-->
+            <!--<Step>-->
+            <!--    <Name>RC-get-user-userid-bankacc</Name>-->
+            <!--    <Condition>(proxy.pathsuffix MatchesPath "/users/*/bank-accounts") and (request.verb = "GET")</Condition>-->
+            <!--</Step>-->
+            <!--<Step>-->
+            <!--    <Name>RC-get-settlement-calendar</Name>-->
+            <!--    <Condition> (proxy.pathsuffix MatchesPath "/settlement-calendars") and (request.verb = "GET")</Condition>-->
+            <!--</Step>-->
+            <!--<Step>-->
+            <!--    <Name>RC-get-transaction-transactionId</Name>-->
+            <!--    <Condition> (proxy.pathsuffix MatchesPath "/transactions/*")and (request.verb = "GET")</Condition>-->
+            <!--</Step>-->
+            <!--<Step>-->
+            <!--    <Name>RC-get-users-userid</Name>-->
+            <!--    <Condition>(proxy.pathsuffix MatchesPath "/users/*") and (request.verb = "GET")</Condition>-->
+            <!--</Step>-->
+            <!--<Step>-->
+            <!--    <Name>RC-get-payments-meta</Name>-->
+            <!--    <Condition>(proxy.pathsuffix MatchesPath "/payments/meta") and (request.verb = "GET")</Condition>-->
+            <!--</Step>-->
+            <!--<Step>-->
+            <!--    <Name>RC-get-user-userid-bankacc-bankid</Name>-->
+            <!--    <Condition>(proxy.pathsuffix MatchesPath "/users/*/bank-accounts/*") and (request.verb = "GET")</Condition>-->
+            <!--</Step>-->
+        </Response>
+    </PostFlow>
+    <Flows/>
+    <LocalTargetConnection>
+        <APIProxy>MerchantAPI_Concur</APIProxy>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </LocalTargetConnection>
+</TargetEndpoint>

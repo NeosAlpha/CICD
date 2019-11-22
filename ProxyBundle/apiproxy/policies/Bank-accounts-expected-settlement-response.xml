@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Javascript async="false" continueOnError="false" enabled="true" timeLimit="200" name="Bank-accounts-expected-settlement-response">
+    <DisplayName>Bank-accounts-expected-settlement-response</DisplayName>
+    <Properties/>
+    <ResourceURL>jsc://Bank-accounts-expected-settlement-response.js</ResourceURL>
+</Javascript>

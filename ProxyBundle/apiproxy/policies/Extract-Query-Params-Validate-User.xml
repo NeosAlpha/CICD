@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="Extract-Query-Params-Validate-User">
+    <DisplayName>Extract Query Params Validate User</DisplayName>
+    <Source>request</Source>
+    <QueryParam name="action">
+        <Pattern ignoreCase="true">{action}</Pattern>
+    </QueryParam>
+    <QueryParam name="beneficiaryCountryCode">
+        <Pattern ignoreCase="true">{beneficiaryCountryCode}</Pattern>
+    </QueryParam>
+    <VariablePrefix>urirequest</VariablePrefix>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</ExtractVariables>

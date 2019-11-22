@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SpikeArrest async="false" continueOnError="false" enabled="true" name="Spike-Arrest-7">
+    <DisplayName>SA post /quotes</DisplayName>
+    <Properties/>
+    <Identifier ref="developer.app.id"/>
+    <Rate>10ps</Rate>
+</SpikeArrest>

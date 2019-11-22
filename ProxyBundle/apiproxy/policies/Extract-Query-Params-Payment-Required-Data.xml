@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="Extract-Query-Params-Payment-Required-Data">
+    <DisplayName>Extract Query Params Payment Required Data</DisplayName>
+    <Source>request</Source>
+    <QueryParam name="countryCode">
+        <Pattern ignoreCase="true">{countryCode}</Pattern>
+    </QueryParam>
+    <QueryParam name="currencyCode">
+        <Pattern ignoreCase="true">{currencyCode}</Pattern>
+    </QueryParam>
+    <QueryParam name="beneficiaryIdentityEntityType">
+        <Pattern ignoreCase="true">{beneficiaryIdentityEntityType}</Pattern>
+    </QueryParam>
+    <QueryParam name="locale">
+        <Pattern ignoreCase="true">{locale}</Pattern>
+    </QueryParam>
+    <QueryParam name="serviceLevel">
+        <Pattern ignoreCase="true">{serviceLevel}</Pattern>
+    </QueryParam>
+    <VariablePrefix>urirequest</VariablePrefix>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</ExtractVariables>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Javascript async="false" continueOnError="false" enabled="true" timeLimit="200" name="Delete-Bank-Account-Request">
+    <DisplayName>Delete Bank Account Request</DisplayName>
+    <Properties/>
+    <ResourceURL>jsc://Delete-Bank-Account-Request.js</ResourceURL>
+</Javascript>

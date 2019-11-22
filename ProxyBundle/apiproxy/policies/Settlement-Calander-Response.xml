@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Javascript async="false" continueOnError="false" enabled="true" timeLimit="200" name="Settlement-Calander-Response">
+    <DisplayName>Settlement-Calander-Response</DisplayName>
+    <Properties/>
+    <ResourceURL>jsc://Settlement-Calander-Response.js</ResourceURL>
+</Javascript>

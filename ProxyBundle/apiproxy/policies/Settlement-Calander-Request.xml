@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Javascript async="false" continueOnError="false" enabled="true" timeLimit="200" name="Settlement-Calander-Request">
+    <DisplayName>Settlement Calander Request</DisplayName>
+    <Properties/>
+    <ResourceURL>jsc://Settlement-Calander-Request.js</ResourceURL>
+</Javascript>

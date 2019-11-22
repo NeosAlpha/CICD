@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Javascript async="false" continueOnError="false" enabled="true" timeLimit="200" name="Bulk-Quotes-Request-Payload">
+    <DisplayName>Bulk Quotes Request Payload</DisplayName>
+    <Properties/>
+    <ResourceURL>jsc://Bulk-Quotes-Request-Payload.js</ResourceURL>
+</Javascript>

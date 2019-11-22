@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="Error-Handle-Request-Payload">
+    <DisplayName>Error Handle Request Payload</DisplayName>
+    <Set>
+        <Payload contentType="application/json">
+{
+  "timeOfFailure": "{system.time}",
+  "failureType": "validation",
+  "shortMsg":"{error.reason.phrase}",
+  "longMsg": "steps.javascript.ScriptExecutionFailed: Execution of Append_Request_Payload failed with error: Javascript runtime error: \"SyntaxError: Empty JSON string. (RequestPayload.js:1)\""
+}
+</Payload>
+        <StatusCode>500</StatusCode>
+        <ReasonPhrase>Error parsing request payload</ReasonPhrase>
+    </Set>
+    <!--<Add>-->
+    <!--    <Headers>-->
+    <!--        <Header name="invalidKey">Invalid API key! Call the cops!</Header>-->
+    <!--    </Headers>-->
+    <!--</Add>-->
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

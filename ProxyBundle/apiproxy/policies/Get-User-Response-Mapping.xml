@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Javascript async="false" continueOnError="false" enabled="true" timeLimit="200" name="Get-User-Response-Mapping">
+    <DisplayName>Get User Response Mapping</DisplayName>
+    <Properties/>
+    <ResourceURL>jsc://Get-User-Response-Mapping.js</ResourceURL>
+</Javascript>

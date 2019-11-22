@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+            "name": "ci",
+            "policies": [],
+            "proxies": [],
+            "targets": []
+        },
+        {
+            "name": "dev",
+            "policies": [],
+            "proxies": [],
+            "targets": []
+        }
+    ]
+}

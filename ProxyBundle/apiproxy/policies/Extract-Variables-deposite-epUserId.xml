@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="Extract-Variables-deposite-epUserId">
+    <DisplayName>Extract Variables-deposite-epUserId</DisplayName>
+    <Source>request</Source>
+    <URIPath>
+        <Pattern ignoreCase="true">/users/{epUserID}/deposit-references/**</Pattern>
+        <Pattern ignoreCase="true">/users/{epUserID}/deposit-references/</Pattern>
+        <Pattern ignoreCase="true">/users/{epUserID}/deposit-references</Pattern>
+    </URIPath>
+    <VariablePrefix>urirequest</VariablePrefix>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</ExtractVariables>

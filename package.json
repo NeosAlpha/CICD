@@ -1,0 +1,26 @@
+{
+  "name": "codeanalysis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apigeelint": "^0.3.0",
+    "apigeetool": "^0.14.1",
+    "chai": "^4.2.0",
+    "fs": "0.0.1-security",
+    "lodash": "^4.17.15",
+    "mocha": "^6.2.2",
+    "mocha-teamcity-reporter": "^3.0.0",
+    "supertest": "^4.0.2",
+    "extract-zip": "^1.6.7",
+    "mochawesome": "^4.0.1"
+  },
+  "devDependencies": {
+    "mocha-teamcity-reporter": "^3.0.0"
+  }
+}

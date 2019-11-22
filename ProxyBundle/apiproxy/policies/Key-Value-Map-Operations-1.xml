@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyValueMapOperations async="false" continueOnError="false" enabled="true" name="Key-Value-Map-Operations-1" mapIdentifier="key_store_1">
+    <DisplayName>Key Value Map Operations-1</DisplayName>
+    <Properties/>
+    <Get assignTo="developerPassword">
+        <Key>
+            <Parameter ref="developerEmail"/>
+        </Key>
+    </Get>
+    <Scope>environment</Scope>
+</KeyValueMapOperations>

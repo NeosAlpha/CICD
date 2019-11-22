@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RaiseFault async="false" continueOnError="false" enabled="true" name="Raise-Fault-1">
+    <DisplayName>Raise Fault-1</DisplayName>
+    <Properties/>
+    <FaultResponse>
+        <Set>
+            <!--<Name>Error-Handling</Name>-->
+            <!--<Condition>(fault.name Matches "RaiseFault") </Condition>-->
+            <Headers/>
+            <Payload contentType="application/json">
+            {
+  "timeOfFailure": "2018-05-09T09:00:45.073+00:00",
+  "failureType": "validation",
+  "shortMsg": "Error parsing request payload",
+  "longMsg": "steps.javascript.ScriptExecutionFailed: Execution of Append_Request_Payload failed with error: Javascript runtime error: \"SyntaxError: Empty JSON string. (RequestPayload.js:1)\""
+}
+            </Payload>
+            <StatusCode>500</StatusCode>
+            <ReasonPhrase>Server Error</ReasonPhrase>
+        </Set>
+    </FaultResponse>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</RaiseFault>

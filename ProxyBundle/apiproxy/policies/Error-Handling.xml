@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Javascript async="false" continueOnError="false" enabled="true" timeLimit="200" name="Error-Handling">
+    <DisplayName>Error Handling</DisplayName>
+    <Properties/>
+    <ResourceURL>jsc://Error-Handling.js</ResourceURL>
+</Javascript>

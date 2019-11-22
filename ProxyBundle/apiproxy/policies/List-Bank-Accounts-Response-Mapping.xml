@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Javascript async="false" continueOnError="false" enabled="true" timeLimit="200" name="List-Bank-Accounts-Response-Mapping">
+    <DisplayName>List Bank Accounts Response Mapping</DisplayName>
+    <Properties/>
+    <ResourceURL>jsc://List-Bank-Accounts-Response-Mapping.js</ResourceURL>
+</Javascript>

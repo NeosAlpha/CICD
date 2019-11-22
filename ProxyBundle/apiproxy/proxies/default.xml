@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <Description/>
+    <!--<FaultRules/>-->
+    <PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <Name>FC-CORS-Preflow</Name>
+            </Step>
+            <Step>
+                <Name>Get-Request-Verb</Name>
+            </Step>
+            <Step>
+                <Name>validate-content-type</Name>
+            </Step>
+            <Step>
+                <Condition>requestTriggerError equals "true"</Condition>
+                <FaultRules/>
+                <Name>content-type-error</Name>
+            </Step>
+            <!--<Step>-->
+            <!--    <Condition>((proxy.pathsuffix MatchesPath "/balances") or (proxy.pathsuffix MatchesPath "/transactions") or (proxy.pathsuffix MatchesPath "/statements")) and (request.verb = "GET")</Condition>-->
+            <!--    <Name>RC-get-balance</Name>-->
+            <!--</Step>-->
+            <!--<Step>-->
+            <!--    <Condition>((proxy.pathsuffix MatchesPath "/users/*/bank-accounts") or (proxy.pathsuffix MatchesPath "/settlement-calendars") or (proxy.pathsuffix MatchesPath "/payments/meta") or (proxy.pathsuffix MatchesPath "/users/*/bank-accounts/*")or (proxy.pathsuffix MatchesPath "/users/*")or (proxy.pathsuffix MatchesPath "/transactions/*"))and (request.verb = "GET")</Condition>-->
+            <!--    <Name>RC-OneHour</Name>-->
+            <!--</Step>-->
+        </Request>
+        <Response/>
+    </PreFlow>
+    <FaultRules>
+        <FaultRule name="validation-error">
+            <Condition>(error.reason.phrase = "validation error")</Condition>
+            <Step>
+                <Name>FC-CORS-Postflow</Name>
+            </Step>
+            <Step>
+                <Name>Validation-Error-Handling</Name>
+            </Step>
+        </FaultRule>
+        <FaultRule name="server-error">
+            <Condition>(error.reason.phrase != "OK CORS OPTIONS") and (error.reason.phrase != "validation error")</Condition>
+            <Step>
+                <Name>FC-CORS-Postflow</Name>
+            </Step>
+            <Step>
+                <Name>Server-Error-Handling</Name>
+            </Step>
+        </FaultRule>
+        <FaultRule name="script-error">
+            <Condition>(fault.name = "return-generic-error") or (fault.name = "access_token_expired") or (fault.name = "invalid_access_token") or (fault.name = "InvalidAccessToken") or (error.reason.phrase = "Content-Type-Error") or (fault.name = "SpikeArrestViolation")</Condition>
+            <Step>
+                <Name>FC-CORS-Postflow</Name>
+            </Step>
+
+              <!--    <Step> -->
+			  			            <!--     <Condition>(error.reason.phrase != "Content-Type-Error")</Condition>-->
+
+                <!--    <Name>Extract-Error-Message</Name> -->
+              <!--  </Step> -->
+        </FaultRule>
+        <DefaultFaultRule>
+            <Step>
+                <Name>Error-Handling</Name>
+            </Step>
+        </DefaultFaultRule>
+        <FaultRule name="server-error">
+            <Condition>(fault.name = "ScriptExecutionFailed")</Condition>
+            <Step>
+                <Name>FC-CORS-Postflow</Name>
+            </Step>
+         <!--    <Step> -->
+                <!--    <Name>Extract-Error-Message</Name> -->
+              <!--  </Step> -->
+            <Step>
+                <Name>Error-Handling</Name>
+            </Step>
+        </FaultRule>
+    </FaultRules>
+    <!--<DefaultFaultRule name="default-fault">-->
+    <!--    <Step>-->
+    <!--        <Name>FC-CORS-Postflow</Name>-->
+    <!--    </Step>-->
+    <!--    <Step>-->
+    <!--        <Name>Extract-Error-Message</Name>-->
+    <!--    </Step>-->
+    <!--    <Step>-->
+    <!--        <Name>Error-Handling</Name>-->
+    <!--    </Step>-->
+    <!--</DefaultFaultRule>-->
+    <PostFlow name="PostFlow">
+        <Response>
+            <Step>
+                <Condition>triggerError equals "true"</Condition>
+                <FaultRules/>
+                <Name>server-error</Name>
+            </Step>
+        </Response>
+    </PostFlow>
+    <Flows>
+        <Flow name="post /users">
+            <Description>Creates a User</Description>
+            <Request>
+                <Step>
+                    <Name>verify-oauth-v2-access-token</Name>
+                </Step>
+                <!--<Step>-->
+                <!--    <Name>Spike-Arrest-1</Name>-->
+                <!--</Step>-->
+                <Step>
+                    <Name>Access-Entity-1</Name>
+                </Step>
+                <!--<Step>-->
+                <!--    <Name>Extract-Variables-1</Name>-->
+                <!--    <Condition>(request.header.Content-Length &gt; 0)</Condition>-->
+                <!--</Step>-->
+                <Step>
+                    <Name>IP-Access-Validation</Name>
+                </Step>
+                <Step>
+                    <Name>Extract-Query-Params-Validate-User</Name>
+                </Step>
+                <Step>
+                    <Name>Change-Action-Parameter-Case</Name>
+                </Step>
+                <Step>
+                    <Name>User - Request Payload</Name>
+                    <Condition>(urirequest.action = null)</Condition>
+                    <!--<Condition>request.verb != "OPTIONS"</Condition>-->
+                </Step>
+                <Step>
+                    <Name>Validate-Payer-Identity-request</Name>
+                    <Condition>(urirequest.action = "validate")</Condition>
+                </Step>
+                <Step>
+                    <Name>GetFullRequestPayload</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>User - Response Payload</Name>
+                    <Condition>(urirequest.action = null)</Condition>
+                    <!--<Condition>request.verb != "OPTIONS"</Condition>-->
+                </Step>
+                <Step>
+                    <Name>Validate-Payer-Identity-response</Name>
+                    <Condition>(urirequest.action = "validate")</Condition>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/users") and (request.verb = "POST")</Condition>
+        </Flow>
+        <Flow name="get /users/{userID}">
+            <Description>Retrieves a User</Description>
+            <Request>
+                <Step>
+                    <Name>verify-oauth-v2-access-token</Name>
+                </Step>
+                <!--<Step>-->
+                <!--    <Name>Spike-Arrest-13</Name>-->
+                <!--</Step>-->
+                <Step>
+                    <Name>Access-Entity-1</Name>
+                </Step>
+                <!--<Step>-->
+                <!--    <Name>Extract-Variables-1</Name>-->
+                <!--    <Condition>(request.header.Content-Length &gt; 0)</Condition>-->
+                <!--</Step>-->
+                <Step>
+                    <Name>IP-Access-Validation</Name>
+                </Step>
+                <Step>
+                    <Name>Extract-Parameters-epUserID</Name>
+                </Step>
+                <Step>
+                    <Name>Get-Users-Request-Mapping</Name>
+                </Step>
+                <!--<Step>-->
+                <!--    <Name>RC-get-users-userid</Name>-->
+                <!--</Step>-->
+            </Request>
+            <Response>
+                <Step>
+                    <Name>Get-User-Response-Mapping</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/users/*") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="unknown-resource">
+            <Description>When resource do not match</Description>
+            <Request>
+                <Step>
+                    <Name>Assign-Message-Unknown-Resource</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>404-Response</Name>
+                </Step>
+            </Response>
+        </Flow>
+    </Flows>
+    <HTTPProxyConnection>
+        <BasePath>/v1/cicd/</BasePath>
+        <Properties/>
+        <VirtualHost>api.earthport.com</VirtualHost>
+    </HTTPProxyConnection>
+    <!--<RouteRule name="NoRoute">-->
+    <!--    <Condition>request.verb = "OPTIONS"</Condition>-->
+    <!--<Condition>request.verb == "OPTIONS" AND request.header.origin != null-->
+    <!--    AND request.header.Access-Control-Request-Method != null</Condition>-->
+    <!--</RouteRule>-->
+    <RouteRule name="null">
+        <Condition>(unknown-resource="true")</Condition>
+    </RouteRule>
+    <RouteRule name="default">
+        <TargetEndpoint>default</TargetEndpoint>
+    </RouteRule>
+</ProxyEndpoint>

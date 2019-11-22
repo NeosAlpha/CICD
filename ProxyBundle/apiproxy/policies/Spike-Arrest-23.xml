@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SpikeArrest async="false" continueOnError="false" enabled="true" name="Spike-Arrest-23">
+    <DisplayName>SA  post /users/{userID}/deposit-references</DisplayName>
+    <Properties/>
+    <Identifier ref="developer.app.id"/>
+    <Rate>10ps</Rate>
+</SpikeArrest>

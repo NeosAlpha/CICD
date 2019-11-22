@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Javascript async="false" continueOnError="false" enabled="true" timeLimit="200" name="Update-User-Response-Mapping">
+    <DisplayName>Update User Response Mapping</DisplayName>
+    <Properties/>
+    <ResourceURL>jsc://Update-User-Response-Mapping.js</ResourceURL>
+</Javascript>

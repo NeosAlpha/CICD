@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Javascript async="false" continueOnError="false" enabled="true" timeLimit="200" name="Get-Bank-Accounts-Request">
+    <DisplayName>Get Bank Accounts Request</DisplayName>
+    <Properties/>
+    <ResourceURL>jsc://Get-Bank-Accounts-Request.js</ResourceURL>
+</Javascript>

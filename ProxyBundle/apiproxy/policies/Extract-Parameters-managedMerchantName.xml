@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="Extract-Parameters-managedMerchantName">
+    <DisplayName>Extract-Parameters-managedMerchantName</DisplayName>
+    <Properties/>
+    <QueryParam name="managedMerchantName">
+        <Pattern ignoreCase="true">{managedMerchantName}</Pattern>
+    </QueryParam>
+    <VariablePrefix>urirequest</VariablePrefix>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</ExtractVariables>

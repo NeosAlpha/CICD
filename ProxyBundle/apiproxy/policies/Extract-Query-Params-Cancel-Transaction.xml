@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="Extract-Query-Params-Cancel-Transaction">
+    <DisplayName>Extract Query Params Cancel Transaction</DisplayName>
+    <Source>request</Source>
+    <QueryParam name="merchantCancellationReqID">
+        <Pattern ignoreCase="true">{merchantCancellationReqID}</Pattern>
+    </QueryParam>
+    <VariablePrefix>urirequest</VariablePrefix>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</ExtractVariables>

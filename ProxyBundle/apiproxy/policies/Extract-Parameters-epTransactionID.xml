@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="Extract-Parameters-epTransactionID">
+    <DisplayName>Extract-Parameters-epTransactionID</DisplayName>
+    <Source>request</Source>
+    <URIPath>
+        <Pattern ignoreCase="true">/transactions/{transactionID}</Pattern>
+    </URIPath>
+    <QueryParam name="idType">
+        <Pattern ignoreCase="true">{idType}</Pattern>
+    </QueryParam>
+    <VariablePrefix>urirequest</VariablePrefix>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</ExtractVariables>

@@ -1,0 +1,25 @@
+{
+ "userID": {"merchantUserID": "userID_110054884555"},
+ "managedMerchantIdentity": "ABCCORP",
+ "accountCurrency": "GBP",
+ "payerIdentity": {
+   "individualIdentity": {
+     "name": {
+       "familyName": "Smith",
+       "givenNames": "John"
+     },
+     "address": {
+       "addressLine1": "ABC",
+        "city": "ABC",
+       "country": "GB",
+       "postcode": "EC1A 4HY",
+       "province": "ABC"
+     },
+     "birthInformation": {
+       "cityOfBirth": "ABC",
+       "countryOfBirth": "GB",
+       "dateOfBirth": "2001-01-01"
+     }
+   }
+ }
+}

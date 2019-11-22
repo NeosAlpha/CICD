@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<JavaCallout async="false" continueOnError="false" enabled="true" name="IPMatcher">
+    <DisplayName>IPMatcher</DisplayName>
+    <Properties/>
+    <ClassName>class</ClassName>
+    <ResourceURL>java://spring-security-web-3.1.3.release.jar</ResourceURL>
+</JavaCallout>

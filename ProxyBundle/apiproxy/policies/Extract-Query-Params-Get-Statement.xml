@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="Extract-Query-Params-Get-Statement">
+    <DisplayName>Extract Query Params Get Statement</DisplayName>
+    <Source>request</Source>
+    <QueryParam name="managedMerchantName">
+        <Pattern ignoreCase="true">{managedMerchantName}</Pattern>
+    </QueryParam>
+    <QueryParam name="currency">
+        <Pattern ignoreCase="true">{currency}</Pattern>
+    </QueryParam>
+    <QueryParam name="startDateTime">
+        <Pattern ignoreCase="true">{startDateTime}</Pattern>
+    </QueryParam>
+    <QueryParam name="endDateTime">
+        <Pattern ignoreCase="true">{endDateTime}</Pattern>
+    </QueryParam>
+    <QueryParam name="sortOrder">
+        <Pattern ignoreCase="true">{sortOrder}</Pattern>
+    </QueryParam>
+    <QueryParam name="offset">
+        <Pattern ignoreCase="true">{offset}</Pattern>
+    </QueryParam>
+    <QueryParam name="pageSize">
+        <Pattern ignoreCase="true">{pageSize}</Pattern>
+    </QueryParam>
+    <VariablePrefix>urirequest</VariablePrefix>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</ExtractVariables>

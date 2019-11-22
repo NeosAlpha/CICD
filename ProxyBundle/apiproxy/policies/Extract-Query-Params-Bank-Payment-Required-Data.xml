@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="Extract-Query-Params-Bank-Payment-Required-Data">
+    <DisplayName>Extract Query Params Bank Payment Required Data</DisplayName>
+    <Source>request</Source>
+    <QueryParam name="amount">
+        <Pattern ignoreCase="true">{amount}</Pattern>
+    </QueryParam>
+    <QueryParam name="currency">
+        <Pattern ignoreCase="true">{currency}</Pattern>
+    </QueryParam>
+    <QueryParam name="payerType">
+        <Pattern ignoreCase="true">{payerType}</Pattern>
+    </QueryParam>
+    <QueryParam name="serviceLevel">
+        <Pattern ignoreCase="true">{serviceLevel}</Pattern>
+    </QueryParam>
+    <VariablePrefix>urirequest</VariablePrefix>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</ExtractVariables>

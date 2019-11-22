@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SpikeArrest async="false" continueOnError="false" enabled="true" name="Spike-Arrest-17">
+    <DisplayName>SA get /users/{userID}/bank-accounts/{bankID}</DisplayName>
+    <Properties/>
+    <Identifier ref="developer.app.id"/>
+    <Rate>10ps</Rate>
+</SpikeArrest>

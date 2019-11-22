@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Javascript async="false" continueOnError="false" enabled="true" timeLimit="200" name="Change-Action-Parameter-Case">
+    <DisplayName>Change Action Parameter Case</DisplayName>
+    <Properties/>
+    <ResourceURL>jsc://Change-Action-Parameter-Case.js</ResourceURL>
+</Javascript>

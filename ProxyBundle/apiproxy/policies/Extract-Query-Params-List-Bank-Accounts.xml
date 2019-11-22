@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="Extract-Query-Params-List-Bank-Accounts">
+    <DisplayName>Extract Query Params List Bank Accounts</DisplayName>
+    <Source>request</Source>
+    <QueryParam name="includeDeleted">
+        <Pattern ignoreCase="true">{includeDeleted}</Pattern>
+    </QueryParam>
+    <QueryParam name="offset">
+        <Pattern ignoreCase="true">{offset}</Pattern>
+    </QueryParam>
+    <QueryParam name="pageSize">
+        <Pattern ignoreCase="true">{pageSize}</Pattern>
+    </QueryParam>
+    <VariablePrefix>urirequest</VariablePrefix>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</ExtractVariables>

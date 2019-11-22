@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SpikeArrest async="false" continueOnError="false" enabled="true" name="Spike-Arrest-2">
+    <DisplayName>SA get /balance</DisplayName>
+    <Properties/>
+    <Identifier ref="developer.app.id"/>
+    <!--<MessageWeight ref="request.header.weight"/>-->
+    <Rate>10ps</Rate>
+</SpikeArrest>

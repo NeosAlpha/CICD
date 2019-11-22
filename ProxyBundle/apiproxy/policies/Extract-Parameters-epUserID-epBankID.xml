@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="Extract-Parameters-epUserID-epBankID">
+    <DisplayName>Extract-Parameters-epUserID-epBankID</DisplayName>
+    <Source>request</Source>
+    <URIPath>
+        <Pattern ignoreCase="true">/users/{userID}/bank-accounts/{bankID}/**</Pattern>
+        <Pattern ignoreCase="true">/users/{userID}/bank-accounts/{bankID}/</Pattern>
+        <Pattern ignoreCase="true">/users/{userID}/bank-accounts/{bankID}</Pattern>
+    </URIPath>
+    <QueryParam name="idType">
+        <Pattern ignoreCase="true">{idType}</Pattern>
+    </QueryParam>
+    <!--<QueryParam name="payerType">-->
+    <!--    <Pattern ignoreCase="true">{payerType}</Pattern>-->
+    <!--</QueryParam>-->
+    <VariablePrefix>urirequest</VariablePrefix>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</ExtractVariables>
